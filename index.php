@@ -10,7 +10,7 @@
                         <nombre>I</nombre>
                             <unidades_didacticas>
                                 <ud1>
-                                    <nombre>FUNDAMENTOS DE PROGRAMACIÓN WEB</nombre>
+                                    <nombre>FUNDAMENTOS DE PROGRAMACIÓN</nombre>
                                 </ud1>
                                 <ud2>
                                     <nombre>REDES DE INTERNET</nombre>
