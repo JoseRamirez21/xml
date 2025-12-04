@@ -104,18 +104,26 @@ $m3['periodos'] = [$p5, $p6];
 $pe1 = array();
 $pe1['nombre'] = "DISEÑO Y PROGRAMACIÓN WEB";
 $pe1['modulos'] = [$m1, $m2, $m3];
-print_r($pe1);
 
 $pe2 = array();
+$pe2['nombre'] = "Enfermeria Tecnica";
+$pe2['modulos'] = [];
+
 $pe3 = array();
+$pe3['nombre'] = "Industrias de Alimentos y Bebidas";
+$pe3['modulos'] = [];
+
 $pe4 = array();
+$pe4['nombre'] = "Mecatrónica Automotriz";
+$pe4['modulos'] = [];
+
 $pe5 = array();
+$pe5['nombre'] = "Produccón Agropecuaria";
+$pe5['modulos'] = [];
+
 
 $ies['nombre'] = "IES Público HUANTA";
 $ies['programas_estudios'] = [$pe1, $pe2, $pe3, $pe4, $pe5];
-
-
-
 
 $xml = new DOMDocument('1.0', 'UTF-8');
 $xml->formatOutput = true;
@@ -123,17 +131,69 @@ $et1 = $xml->createElement('ies');
 $xml->appendChild($et1);
 
 $nombre_ies = $xml->createElement("nombre", $ies['nombre']);
-$programa_ies = $xml->createElement("programas_estudios");
+$programas_ies = $xml->createElement("programas_estudio"); // ← CAMBIADO
 
+$et1->appendChild($nombre_ies);
+$et1->appendChild($programas_ies);
+
+// Añadir Programas de Estudio
 foreach ($ies["programas_estudios"] as $indice => $PEs) {
-    $num_pe = $xml->createElement("pe".$indice+1);
+    $num_pe = $xml->createElement("pe".($indice+1));
     $nombre_pe = $xml->createElement("nombre", $PEs['nombre']);
+
+    // CONTENEDOR DE MÓDULOS ← AGREGADO
+    $modulos_tag = $xml->createElement("modulos");
+
+    // Añadir módulos
+    foreach ($PEs['modulos'] as $indice_modulo => $Modulo) {
+
+        $num_mod = $xml->createElement("mod".($indice_modulo+1));
+        $nom_mod = $xml->createElement("nombre", $Modulo['nombre']);
+
+        // CONTENEDOR DE PERIODOS ← AGREGADO
+        $periodos_tag = $xml->createElement("periodos");
+
+        // Añadir periodos
+        foreach ($Modulo['periodos'] as $indice_periodo => $Periodo) {
+
+            $num_per = $xml->createElement("per".($indice_periodo+1));
+            $nom_per = $xml->createElement("nombre", $Periodo['nombre']);
+
+            // Etiquetas
+            $uds = $xml->createElement("unidades_didacticas");
+
+            // Añadir unidades didácticas
+            foreach ($Periodo['unidades_didacticas'] as $indice_ud => $Ud) {
+
+                // udX ← CAMBIADO
+                $num_ud = $xml->createElement("ud".($indice_ud+1));
+                $nom_ud = $xml->createElement("nombre", $Ud);
+
+                $num_ud->appendChild($nom_ud);
+                $uds->appendChild($num_ud);
+            }
+
+            $num_per->appendChild($nom_per);
+            $num_per->appendChild($uds);
+            $periodos_tag->appendChild($num_per);
+        }
+
+        $num_mod->appendChild($nom_mod);
+        $num_mod->appendChild($periodos_tag); // ← AGREGADO
+        $modulos_tag->appendChild($num_mod);
+    }
+
     $num_pe->appendChild($nombre_pe);
+    $num_pe->appendChild($modulos_tag); // ← AGREGADO
     $programas_ies->appendChild($num_pe);
 }
 
-
 $archivo = "ies.xml";
 $xml->save($archivo);
-
 ?>
+
+
+
+
+
+        
