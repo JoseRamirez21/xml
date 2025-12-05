@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<programas_estudios>
+  <pe_1>
+    <codigo>DPW</codigo>
+    <tipo>Modular</tipo>
+    <nombre>DISEÑO Y PROGRAMACIÓN WEB</nombre>
+    <planes_estudio>
+      <plan_1>
+        <nombre>2021</nombre>
+        <resolucion>RD. 095-8566</resolucion>
+        <fecha_registro>2025-08-11 08:58:16</fecha_registro>
+        <modulos_formativos>
+          <modulo_1>
+            <descripcion>ANALISIS Y DISEÑO DE SISTEMAS WEB</descripcion>
+            <nro_modulo>1</nro_modulo>
+            <semestres>
+              <semestre_1>
+                <descripcion>I</descripcion>
+              </semestre_1>
+              <semestre_2>
+                <descripcion>II</descripcion>
+              </semestre_2>
+            </semestres>
+          </modulo_1>
+          <modulo_2>
+            <descripcion>DESARROLLO DE APLICACIONES WEB</descripcion>
+            <nro_modulo>2</nro_modulo>
+            <semestres>
+              <semestre_3>
+                <descripcion>III</descripcion>
+              </semestre_3>
+              <semestre_4>
+                <descripcion>IV</descripcion>
+              </semestre_4>
+            </semestres>
+          </modulo_2>
+          <modulo_3>
+            <descripcion>DISEÑO DE SERVICIOS WEB</descripcion>
+            <nro_modulo>3</nro_modulo>
+            <semestres>
+              <semestre_5>
+                <descripcion>V</descripcion>
+              </semestre_5>
+              <semestre_6>
+                <descripcion>VI</descripcion>
+              </semestre_6>
+            </semestres>
+          </modulo_3>
+        </modulos_formativos>
+      </plan_1>
+    </planes_estudio>
+  </pe_1>
+  <pe_2>
+    <codigo>ET</codigo>
+    <tipo>Modular</tipo>
+    <nombre>ENFERMERÍA TÉCNICA</nombre>
+    <planes_estudio>
+      <plan_2>
+        <nombre>2021</nombre>
+        <resolucion>RD. 095-8566</resolucion>
+        <fecha_registro>2025-08-11 08:58:32</fecha_registro>
+        <modulos_formativos>
+          <modulo_4>
+            <descripcion>ASISTENCIA EN PROMOCIÓN Y PREVENCIÓN DE LA SALUD</descripcion>
+            <nro_modulo>1</nro_modulo>
+            <semestres>
+              <semestre_7>
+                <descripcion>I</descripcion>
+              </semestre_7>
+              <semestre_8>
+                <descripcion>II</descripcion>
+              </semestre_8>
+            </semestres>
+          </modulo_4>
+          <modulo_5>
+            <descripcion>ASISTENCIA EN LA ATENCIÓN BÁSICA DE LA SALUD</descripcion>
+            <nro_modulo>2</nro_modulo>
+            <semestres>
+              <semestre_9>
+                <descripcion>III</descripcion>
+              </semestre_9>
+              <semestre_10>
+                <descripcion>IV</descripcion>
+              </semestre_10>
+            </semestres>
+          </modulo_5>
+          <modulo_6>
+            <descripcion>ASISTENCIA EN LA ATENCIÓN INTEGRAL EN SALUD</descripcion>
+            <nro_modulo>3</nro_modulo>
+            <semestres>
+              <semestre_11>
+                <descripcion>V</descripcion>
+              </semestre_11>
+              <semestre_12>
+                <descripcion>VI</descripcion>
+              </semestre_12>
+            </semestres>
+          </modulo_6>
+        </modulos_formativos>
+      </plan_2>
+      <plan_6>
+        <nombre>2025</nombre>
+        <resolucion>--</resolucion>
+        <fecha_registro>2025-08-11 08:59:50</fecha_registro>
+        <modulos_formativos>
+          <modulo_23>
+            <descripcion>ASISTENCIA EN PROMOCIÓN Y PREVENCIÓN DE LA SALUD</descripcion>
+            <nro_modulo>1</nro_modulo>
+            <semestres>
+              <semestre_37>
+                <descripcion>I</descripcion>
+              </semestre_37>
+              <semestre_38>
+                <descripcion>II</descripcion>
+              </semestre_38>
+            </semestres>
+          </modulo_23>
+          <modulo_24>
+            <descripcion>ASISTENCIA EN LA ATENCIÓN BÁSICA DE LA SALUD</descripcion>
+            <nro_modulo>2</nro_modulo>
+            <semestres>
+              <semestre_39>
+                <descripcion>III</descripcion>
+              </semestre_39>
+              <semestre_40>
+                <descripcion>IV</descripcion>
+              </semestre_40>
+            </semestres>
+          </modulo_24>
+          <modulo_25>
+            <descripcion>ASISTENCIA EN LA ATENCIÓN INTEGRAL EN SALUD</descripcion>
+            <nro_modulo>3</nro_modulo>
+            <semestres>
+              <semestre_41>
+                <descripcion>V</descripcion>
+              </semestre_41>
+              <semestre_42>
+                <descripcion>VI</descripcion>
+              </semestre_42>
+            </semestres>
+          </modulo_25>
+        </modulos_formativos>
+      </plan_6>
+    </planes_estudio>
+  </pe_2>
+  <pe_3>
+    <codigo>IA</codigo>
+    <tipo>Modular</tipo>
+    <nombre>INDUSTRIAS ALIMENTARIAS</nombre>
+    <planes_estudio>
+      <plan_3>
+        <nombre>2021</nombre>
+        <resolucion>RD. 095-8566</resolucion>
+        <fecha_registro>2025-08-11 08:58:48</fecha_registro>
+        <modulos_formativos>
+          <modulo_7>
+            <descripcion>MANEJO DE LA MATERIA PRIMA</descripcion>
+            <nro_modulo>1</nro_modulo>
+            <semestres>
+              <semestre_13>
+                <descripcion>I</descripcion>
+              </semestre_13>
+            </semestres>
+          </modulo_7>
+          <modulo_8>
+            <descripcion>PROCESO DE LA PRODUCCIÓN EN LA INDUSTRIA ALIMENTARIA</descripcion>
+            <nro_modulo>2</nro_modulo>
+            <semestres>
+              <semestre_14>
+                <descripcion>II</descripcion>
+              </semestre_14>
+              <semestre_15>
+                <descripcion>III</descripcion>
+              </semestre_15>
+              <semestre_16>
+                <descripcion>IV</descripcion>
+              </semestre_16>
+            </semestres>
+          </modulo_8>
+          <modulo_9>
+            <descripcion>ENVASADO Y EMBALADO DE ALIMENTOS</descripcion>
+            <nro_modulo>3</nro_modulo>
+            <semestres>
+              <semestre_17>
+                <descripcion>V</descripcion>
+              </semestre_17>
+            </semestres>
+          </modulo_9>
+          <modulo_10>
+            <descripcion>CONTROL PARA EL ASEGURAMIENTO DE LA CALIDAD DE ALIMENTOS</descripcion>
+            <nro_modulo>4</nro_modulo>
+            <semestres>
+              <semestre_18>
+                <descripcion>VI</descripcion>
+              </semestre_18>
+            </semestres>
+          </modulo_10>
+        </modulos_formativos>
+      </plan_3>
+    </planes_estudio>
+  </pe_3>
+  <pe_4>
+    <codigo>MA</codigo>
+    <tipo>Modular</tipo>
+    <nombre>MECATRONICA AUTOMOTRIZ</nombre>
+    <planes_estudio>
+      <plan_4>
+        <nombre>2021</nombre>
+        <resolucion>RD. 095-8566</resolucion>
+        <fecha_registro>2025-08-11 08:59:05</fecha_registro>
+        <modulos_formativos>
+          <modulo_11>
+            <descripcion>MANTENIMIENTO PROGRAMADO Y REPARACIÓN DE LOS SISTEMAS DE CONTROL DEL VEHÍCULO</descripcion>
+            <nro_modulo>1</nro_modulo>
+            <semestres>
+              <semestre_19>
+                <descripcion>I</descripcion>
+              </semestre_19>
+              <semestre_20>
+                <descripcion>II</descripcion>
+              </semestre_20>
+            </semestres>
+          </modulo_11>
+          <modulo_12>
+            <descripcion>MANTENIMIENTO Y REPARACIÓN DEL SISTEMA ELÉCTRICO Y ELECTRÓNICO AUTOMOTRIZ</descripcion>
+            <nro_modulo>2</nro_modulo>
+            <semestres>
+              <semestre_21>
+                <descripcion>III</descripcion>
+              </semestre_21>
+            </semestres>
+          </modulo_12>
+          <modulo_13>
+            <descripcion>MANTENIMIENTO Y REPARACIÓN DEL SISTEMA DE TRANSMISIÓN.</descripcion>
+            <nro_modulo>3</nro_modulo>
+            <semestres>
+              <semestre_22>
+                <descripcion>IV</descripcion>
+              </semestre_22>
+            </semestres>
+          </modulo_13>
+          <modulo_14>
+            <descripcion>MANTENIMIENTO Y REPARACIÓN DE MOTORES DE COMBUSTIÓN INTERNA Y SISTEMAS ELECTRÓNICOS.</descripcion>
+            <nro_modulo>4</nro_modulo>
+            <semestres>
+              <semestre_23>
+                <descripcion>V</descripcion>
+              </semestre_23>
+              <semestre_24>
+                <descripcion>VI</descripcion>
+              </semestre_24>
+            </semestres>
+          </modulo_14>
+        </modulos_formativos>
+      </plan_4>
+      <plan_8>
+        <nombre>2025</nombre>
+        <resolucion>--</resolucion>
+        <fecha_registro>2025-08-11 09:00:30</fecha_registro>
+        <modulos_formativos>
+          <modulo_30>
+            <descripcion>MANTENIMIENTO DE VEHÍCULOS CONVENCIONALES Y CON ASISTENCIA ELECTRÓNICA.</descripcion>
+            <nro_modulo>1</nro_modulo>
+            <semestres>
+              <semestre_49>
+                <descripcion>I</descripcion>
+              </semestre_49>
+              <semestre_50>
+                <descripcion>II</descripcion>
+              </semestre_50>
+            </semestres>
+          </modulo_30>
+          <modulo_31>
+            <descripcion>MANTENIMIENTO DE SISTEMAS ELECTRÍCOS Y ELECTRÓNICOS AUTOMOTRICES.</descripcion>
+            <nro_modulo>2</nro_modulo>
+            <semestres>
+              <semestre_51>
+                <descripcion>III</descripcion>
+              </semestre_51>
+            </semestres>
+          </modulo_31>
+          <modulo_32>
+            <descripcion>MANTENIMIENTO DEL SISTEMA DE TRANSMISIÓN DE VEHÍCULOS CON ASISTENCIA ELECTRÓNICA.</descripcion>
+            <nro_modulo>3</nro_modulo>
+            <semestres>
+              <semestre_52>
+                <descripcion>IV</descripcion>
+              </semestre_52>
+            </semestres>
+          </modulo_32>
+          <modulo_33>
+            <descripcion>MANTENIMIENTO DE MOTORES DE COMBUSTIÓN INTERNA CON ASISTENCIA ELECTRÓNICA.</descripcion>
+            <nro_modulo>4</nro_modulo>
+            <semestres>
+              <semestre_53>
+                <descripcion>V</descripcion>
+              </semestre_53>
+              <semestre_54>
+                <descripcion>VI</descripcion>
+              </semestre_54>
+            </semestres>
+          </modulo_33>
+        </modulos_formativos>
+      </plan_8>
+    </planes_estudio>
+  </pe_4>
+  <pe_5>
+    <codigo>PA</codigo>
+    <tipo>Modular</tipo>
+    <nombre>PRODUCCIÓN AGROPECUARIA</nombre>
+    <planes_estudio>
+      <plan_5>
+        <nombre>2021</nombre>
+        <resolucion>RD. 095-8566</resolucion>
+        <fecha_registro>2025-08-11 08:59:23</fecha_registro>
+        <modulos_formativos>
+          <modulo_15>
+            <descripcion>GESTIÓN DE LA PRODUCCIÓN DE CULTIVOS</descripcion>
+            <nro_modulo>1</nro_modulo>
+            <semestres>
+              <semestre_25>
+                <descripcion>I</descripcion>
+              </semestre_25>
+              <semestre_26>
+                <descripcion>II</descripcion>
+              </semestre_26>
+            </semestres>
+          </modulo_15>
+          <modulo_16>
+            <descripcion>GESTIÓN DE LA PRODUCCIÓN PECUARIA</descripcion>
+            <nro_modulo>2</nro_modulo>
+            <semestres>
+              <semestre_27>
+                <descripcion>III</descripcion>
+              </semestre_27>
+              <semestre_28>
+                <descripcion>IV</descripcion>
+              </semestre_28>
+            </semestres>
+          </modulo_16>
+          <modulo_17>
+            <descripcion>PREVENCIÓN Y MANEJO SANITARIO Y FITOSANITARIO</descripcion>
+            <nro_modulo>3</nro_modulo>
+            <semestres>
+              <semestre_29>
+                <descripcion>V</descripcion>
+              </semestre_29>
+            </semestres>
+          </modulo_17>
+          <modulo_18>
+            <descripcion>APROVECHAMIENTO Y MERCADEO DE PRODUCTOS AGROPECUARIOS</descripcion>
+            <nro_modulo>4</nro_modulo>
+            <semestres>
+              <semestre_30>
+                <descripcion>VI</descripcion>
+              </semestre_30>
+            </semestres>
+          </modulo_18>
+        </modulos_formativos>
+      </plan_5>
+      <plan_9>
+        <nombre>2025</nombre>
+        <resolucion>--</resolucion>
+        <fecha_registro>2025-08-11 09:00:46</fecha_registro>
+        <modulos_formativos>
+          <modulo_26>
+            <descripcion>PREPARACIÓN DEL TERRENO E IMPLEMENTACIÓN DE INFRAESTRUCTURA AGROPECUARIA</descripcion>
+            <nro_modulo>1</nro_modulo>
+            <semestres>
+              <semestre_43>
+                <descripcion>I</descripcion>
+              </semestre_43>
+            </semestres>
+          </modulo_26>
+          <modulo_27>
+            <descripcion>SUPERVISIÓN Y EJECUCIÓN DEL PLAN OPERATIVO DE LOS PROCESOS PRODUCTIVOS AGROPECUARIOS</descripcion>
+            <nro_modulo>2</nro_modulo>
+            <semestres>
+              <semestre_44>
+                <descripcion>II</descripcion>
+              </semestre_44>
+              <semestre_45>
+                <descripcion>III</descripcion>
+              </semestre_45>
+              <semestre_46>
+                <descripcion>IV</descripcion>
+              </semestre_46>
+            </semestres>
+          </modulo_27>
+          <modulo_28>
+            <descripcion>PROCESAMIENTO PRIMARIO Y APROVECHAMIENTO DE PRODUCTOS AGROPECUARIOS.</descripcion>
+            <nro_modulo>3</nro_modulo>
+            <semestres>
+              <semestre_47>
+                <descripcion>V</descripcion>
+              </semestre_47>
+            </semestres>
+          </modulo_28>
+          <modulo_29>
+            <descripcion>ALMACENAMIENTO Y COMERCIALIZACIÓN DE LA PRODUCCIÓN AGROPECUARIA</descripcion>
+            <nro_modulo>4</nro_modulo>
+            <semestres>
+              <semestre_48>
+                <descripcion>VI</descripcion>
+              </semestre_48>
+            </semestres>
+          </modulo_29>
+        </modulos_formativos>
+      </plan_9>
+    </planes_estudio>
+  </pe_5>
+  <pe_6>
+    <codigo>IAB</codigo>
+    <tipo>Modular</tipo>
+    <nombre>INDUSTRIAS DE ALIMENTOS Y BEBIDAS</nombre>
+    <planes_estudio>
+      <plan_7>
+        <nombre>2025</nombre>
+        <resolucion>--</resolucion>
+        <fecha_registro>2025-08-11 09:00:09</fecha_registro>
+        <modulos_formativos>
+          <modulo_19>
+            <descripcion>RECEPCIÓN, ACONDICIONAMIENTO Y MEZCLADO DE LA MATERIA PRIMA E INSUMOS.</descripcion>
+            <nro_modulo>1</nro_modulo>
+            <semestres>
+              <semestre_31>
+                <descripcion>I</descripcion>
+              </semestre_31>
+              <semestre_32>
+                <descripcion>II</descripcion>
+              </semestre_32>
+            </semestres>
+          </modulo_19>
+          <modulo_20>
+            <descripcion>TRATAMIENTO TÉRMICO, OPERACIONES DE ELIMINACIÓN DE AGUA Y SEPARACIÓN EN EL PROCESAMIENTO DE ALIMENTOS.</descripcion>
+            <nro_modulo>2</nro_modulo>
+            <semestres>
+              <semestre_33>
+                <descripcion>III</descripcion>
+              </semestre_33>
+              <semestre_34>
+                <descripcion>IV</descripcion>
+              </semestre_34>
+            </semestres>
+          </modulo_20>
+          <modulo_21>
+            <descripcion>BIOTECNOLOGÍA Y ENVASADO EN EL PROCESAMIENTO DE ALIMENTOS.</descripcion>
+            <nro_modulo>3</nro_modulo>
+            <semestres>
+              <semestre_35>
+                <descripcion>V</descripcion>
+              </semestre_35>
+            </semestres>
+          </modulo_21>
+          <modulo_22>
+            <descripcion>ASEGURAMIENTO DE LA CALIDAD.</descripcion>
+            <nro_modulo>4</nro_modulo>
+            <semestres>
+              <semestre_36>
+                <descripcion>VI</descripcion>
+              </semestre_36>
+            </semestres>
+          </modulo_22>
+        </modulos_formativos>
+      </plan_7>
+    </planes_estudio>
+  </pe_6>
+</programas_estudios>
