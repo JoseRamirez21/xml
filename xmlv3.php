@@ -105,9 +105,9 @@ echo "✔ Todas las tablas fueron creadas correctamente.<br>";
 $xml = simplexml_load_file('ies_bd1.xml') or die("❌ No se pudo cargar ies_bd1.xml");
 
 foreach ($xml as $i_pe => $pe) {
-    $codigo = $pe->codigo; //Mostrar pantalla
-    $tipo   = $pe->tipo; //Mostrar pantalla
-    $nombre = $pe->nombre;//Mostrar pantalla
+    $codigo = $pe->codigo; 
+    $tipo   = $pe->tipo; 
+    $nombre = $pe->nombre;
 
     $sql = "INSERT INTO sigi_programa_estudios (codigo, tipo, nombre)
             VALUES ('$codigo','$tipo','$nombre')";
@@ -115,10 +115,10 @@ foreach ($xml as $i_pe => $pe) {
     $id_programa = $conexion->insert_id;
 
     foreach($pe->planes_estudio[0] as $i_ple => $plan){
-        $nombre_plan  = $plan->nombre;//Mostrar pantalla
-        $resolucion   = $plan->resolucion;//Mostrar pantalla
-        $fecha        = $plan->fecha_registro;//Mostrar pantalla
-        $perfil       = $plan->perfil_egresado;//Mostrar pantalla
+        $nombre_plan  = $plan->nombre;
+        $resolucion   = $plan->resolucion;
+        $fecha        = $plan->fecha_registro;
+        $perfil       = $plan->perfil_egresado;
 
         $sql = "INSERT INTO sigi_planes_estudio 
                 (id_programa_estudios, nombre, resolucion, fecha_registro, perfil_egresado)
@@ -127,8 +127,8 @@ foreach ($xml as $i_pe => $pe) {
         $id_plan = $conexion->insert_id;
 
         foreach($plan->modulos_formativos[0] as $i_mod => $modulo){
-            $descripcion = $modulo->descripcion;//Mostrar pantalla
-            $nro_modulo  = $modulo->nro_modulo;//Mostrar pantalla
+            $descripcion = $modulo->descripcion;
+            $nro_modulo  = $modulo->nro_modulo;
 
             $sql = "INSERT INTO sigi_modulo_formativo 
                     (descripcion, nro_modulo, id_plan_estudio)
@@ -137,7 +137,7 @@ foreach ($xml as $i_pe => $pe) {
             $id_modulo = $conexion->insert_id;
 
             foreach($modulo->semestres[0] as $i_sem => $semestre){
-                $descripcion_sem = $semestre->descripcion;//Mostrar pantalla
+                $descripcion_sem = $semestre->descripcion;
 
                 $sql = "INSERT INTO sigi_semestre (descripcion, id_modulo_formativo)
                         VALUES ('$descripcion_sem', $id_modulo)";
@@ -145,11 +145,11 @@ foreach ($xml as $i_pe => $pe) {
                 $id_semestre = $conexion->insert_id;
 
                 foreach($semestre->unidades_didacticas[0] as $i_ud => $ud){
-                    $nombre_ud  = $ud->nombre;//Mostrar pantalla
-                    $t          = $ud->creditos_teorico;//Mostrar pantalla
-                    $p          = $ud->creditos_practico;//Mostrar pantalla
-                    $tipo_ud    = $ud->tipo;//Mostrar pantalla
-                    $orden      = $ud->orden;//Mostrar pantalla
+                    $nombre_ud  = $ud->nombre;
+                    $t          = $ud->creditos_teorico;
+                    $p          = $ud->creditos_practico;
+                    $tipo_ud    = $ud->tipo;
+                    $orden      = $ud->orden;
 
                     $sql = "INSERT INTO sigi_unidad_didactica 
                             (nombre, id_semestre, creditos_teorico, creditos_practico, tipo, orden)
