@@ -2,30 +2,20 @@
 <?php
 $conexion = new mysqli("localhost", "root", "root");
 
-// Verificar conexión
 if ($conexion->connect_errno) {
     die("❌ Error de conexión: " . $conexion->connect_error);
 }
-
 $conexion->set_charset("utf8");
 
-// --------------------------------------------------------
-// 1. CREAR LA BASE DE DATOS
-// --------------------------------------------------------
-$sql = "CREATE DATABASE IF NOT EXISTS ies CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish2_ci";
+$sql = "CREATE DATABASE IF NOT EXISTS ies";
 if (!$conexion->query($sql)) {
     die("❌ Error al crear la base de datos: " . $conexion->error);
 }
 
 echo "✔ Base de datos 'ies' creada correctamente.<br>";
-
-// Cambiar conexión a la nueva BD
 $conexion->select_db("ies");
 
-
-// --------------------------------------------------------
-// 2. TABLA sigi_programa_estudios
-// --------------------------------------------------------
+//Crear las tablas 
 $sql = "
 CREATE TABLE IF NOT EXISTS sigi_programa_estudios (
   id INT NOT NULL AUTO_INCREMENT,
@@ -37,10 +27,6 @@ CREATE TABLE IF NOT EXISTS sigi_programa_estudios (
 ";
 $conexion->query($sql);
 
-
-// --------------------------------------------------------
-// 3. TABLA sigi_planes_estudio
-// --------------------------------------------------------
 $sql = "
 CREATE TABLE IF NOT EXISTS sigi_planes_estudio (
   id INT NOT NULL AUTO_INCREMENT,
@@ -59,10 +45,6 @@ CREATE TABLE IF NOT EXISTS sigi_planes_estudio (
 ";
 $conexion->query($sql);
 
-
-// --------------------------------------------------------
-// 4. TABLA sigi_modulo_formativo
-// --------------------------------------------------------
 $sql = "
 CREATE TABLE IF NOT EXISTS sigi_modulo_formativo (
   id INT NOT NULL AUTO_INCREMENT,
@@ -79,10 +61,6 @@ CREATE TABLE IF NOT EXISTS sigi_modulo_formativo (
 ";
 $conexion->query($sql);
 
-
-// --------------------------------------------------------
-// 5. TABLA sigi_semestre
-// --------------------------------------------------------
 $sql = "
 CREATE TABLE IF NOT EXISTS sigi_semestre (
   id INT NOT NULL AUTO_INCREMENT,
@@ -99,9 +77,6 @@ CREATE TABLE IF NOT EXISTS sigi_semestre (
 $conexion->query($sql);
 
 
-// --------------------------------------------------------
-// 6. TABLA sigi_unidad_didactica
-// --------------------------------------------------------
 $sql = "
 CREATE TABLE IF NOT EXISTS sigi_unidad_didactica (
   id INT NOT NULL AUTO_INCREMENT,
@@ -121,45 +96,73 @@ CREATE TABLE IF NOT EXISTS sigi_unidad_didactica (
 ";
 $conexion->query($sql);
 
-
-echo "✔ Todas las tablas fueron creadas correctamente.";
-
+echo "✔ Todas las tablas fueron creadas correctamente.<br>";
 
 
 
 
-//conexion a la BD
-//en cada foreach aser las consultas insert into sigi_programas_estudios, CREAR BD Y MEJOR SI SE CREA LAS TABLAS DESDE EL CODIGO O TAMBIEN MANUAL Y LAS CONSULTAS DESDE AQUI SI
-$xml = simplexml_load_file('ies_bd1.xml') or die('Error, No se cargo el XML escribe correctamente el nombre el archivo');
 
-//echo $xml->pe_1->nombre."<br>";
-//echo $xml->pe_2->nombre;
+$xml = simplexml_load_file('ies_bd1.xml') or die("❌ No se pudo cargar ies_bd1.xml");
+
 foreach ($xml as $i_pe => $pe) {
-    echo 'Codigo:'.$pe->codigo.'<br>';
-    echo 'Tipo:'.$pe->tipo.'<br>';
-    echo 'Nombre:'.$pe->nombre.'<br>';
-    //$consulta = INSERT INTO BD() VALUES() PARA TODAS LAS INFO DE LA BD
+    $codigo = $pe->codigo; //Mostrar pantalla
+    $tipo   = $pe->tipo; //Mostrar pantalla
+    $nombre = $pe->nombre;//Mostrar pantalla
+
+    $sql = "INSERT INTO sigi_programa_estudios (codigo, tipo, nombre)
+            VALUES ('$codigo','$tipo','$nombre')";
+    $conexion->query($sql);
+    $id_programa = $conexion->insert_id;
+
     foreach($pe->planes_estudio[0] as $i_ple => $plan){
-    echo '--'.$plan->nombre. '<br>';
-    echo '--'.$plan->resolucion. '<br>';
-    echo '--'.$plan->fecha_registro. '<br>';
+        $nombre_plan  = $plan->nombre;//Mostrar pantalla
+        $resolucion   = $plan->resolucion;//Mostrar pantalla
+        $fecha        = $plan->fecha_registro;//Mostrar pantalla
+        $perfil       = $plan->perfil_egresado;//Mostrar pantalla
+
+        $sql = "INSERT INTO sigi_planes_estudio 
+                (id_programa_estudios, nombre, resolucion, fecha_registro, perfil_egresado)
+                VALUES ($id_programa, '$nombre_plan', '$resolucion', '$fecha', '$perfil')";
+        $conexion->query($sql);
+        $id_plan = $conexion->insert_id;
+
         foreach($plan->modulos_formativos[0] as $i_mod => $modulo){
-        echo '----'.$modulo->descripcion. '<br>';
+            $descripcion = $modulo->descripcion;//Mostrar pantalla
+            $nro_modulo  = $modulo->nro_modulo;//Mostrar pantalla
+
+            $sql = "INSERT INTO sigi_modulo_formativo 
+                    (descripcion, nro_modulo, id_plan_estudio)
+                    VALUES ('$descripcion', $nro_modulo, $id_plan)";
+            $conexion->query($sql);
+            $id_modulo = $conexion->insert_id;
+
             foreach($modulo->semestres[0] as $i_sem => $semestre){
-             echo '------'.$semestre->descripcion. '<br>';
+                $descripcion_sem = $semestre->descripcion;//Mostrar pantalla
+
+                $sql = "INSERT INTO sigi_semestre (descripcion, id_modulo_formativo)
+                        VALUES ('$descripcion_sem', $id_modulo)";
+                $conexion->query($sql);
+                $id_semestre = $conexion->insert_id;
+
                 foreach($semestre->unidades_didacticas[0] as $i_ud => $ud){
-                  echo '--------'.$ud->nombre. '<br>';
-                  echo '--------'.$ud->creditos_teorico. '<br>';
-                  echo '--------'.$ud->creditos_practico. '<br>';
-                  echo '--------'.$ud->tipo. '<br>';
-                  echo '--------'.$ud->orden. '<br>';
-    }
-    }
+                    $nombre_ud  = $ud->nombre;//Mostrar pantalla
+                    $t          = $ud->creditos_teorico;//Mostrar pantalla
+                    $p          = $ud->creditos_practico;//Mostrar pantalla
+                    $tipo_ud    = $ud->tipo;//Mostrar pantalla
+                    $orden      = $ud->orden;//Mostrar pantalla
+
+                    $sql = "INSERT INTO sigi_unidad_didactica 
+                            (nombre, id_semestre, creditos_teorico, creditos_practico, tipo, orden)
+                            VALUES ('$nombre_ud', $id_semestre, $t, $p, '$tipo_ud', $orden)";
+                    $conexion->query($sql);
+                }
+            }
+        }
     }
 }
-}
+//Se muestra 359 unidades didacticas porque no exixte el 133 
 
-
+echo "XML insertado correctamente";
 
 ?>
 
