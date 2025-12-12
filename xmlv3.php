@@ -7,15 +7,14 @@ if ($conexion->connect_errno) {
 }
 $conexion->set_charset("utf8");
 
-$sql = "CREATE DATABASE IF NOT EXISTS ies";
+$sql = "CREATE DATABASE IF NOT EXISTS ies13";
 if (!$conexion->query($sql)) {
     die("❌ Error al crear la base de datos: " . $conexion->error);
 }
 
-echo "✔ Base de datos 'ies' creada correctamente.<br>";
-$conexion->select_db("ies");
+echo "✔ Base de datos 'ies13' creada correctamente.<br>";
+$conexion->select_db("ies13");
 
-//Crear las tablas 
 $sql = "
 CREATE TABLE IF NOT EXISTS sigi_programa_estudios (
   id INT NOT NULL AUTO_INCREMENT,
@@ -105,9 +104,9 @@ echo "✔ Todas las tablas fueron creadas correctamente.<br>";
 $xml = simplexml_load_file('ies_bd1.xml') or die("❌ No se pudo cargar ies_bd1.xml");
 
 foreach ($xml as $i_pe => $pe) {
-    $codigo = $pe->codigo; 
-    $tipo   = $pe->tipo; 
-    $nombre = $pe->nombre;
+   echo $codigo = $pe->codigo; 
+   echo $tipo   = $pe->tipo; 
+    echo $nombre = $pe->nombre;
 
     $sql = "INSERT INTO sigi_programa_estudios (codigo, tipo, nombre)
             VALUES ('$codigo','$tipo','$nombre')";
